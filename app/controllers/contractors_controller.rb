@@ -1,4 +1,4 @@
-class ContractorsController < ApplicationController
+class ContractorsController < ProtectedController
   before_action :set_contractor, only: [:show, :update, :destroy]
 
   # GET /contractors
