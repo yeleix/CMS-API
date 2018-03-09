@@ -15,17 +15,6 @@ ActiveRecord::Schema.define(version: 20180308221839) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.string "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contractors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
