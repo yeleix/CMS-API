@@ -20,6 +20,7 @@ curl "${API}${URL_PATH}" \
 echo
 
 
+
 # t.string :first_name
 # t.string :last_name
 # t.date :born_on
