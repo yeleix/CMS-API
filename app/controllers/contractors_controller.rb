@@ -15,7 +15,7 @@ class ContractorsController < ProtectedController
 
   # POST /contractors
   def create
-    @contractor = Contractor.new(contractor_params)
+    @contractor = current_user.contractors.build(contractor_params)
 
     if @contractor.save
       render json: @contractor, status: :created
@@ -41,7 +41,7 @@ class ContractorsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contractor
-      @contractor = Contractor.find(params[:id])
+      @contractor = current_user.contractors.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
