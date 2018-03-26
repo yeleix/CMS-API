@@ -5,6 +5,8 @@ class ContractorsController < ProtectedController
   def index
     @contractors = Contractor.all
 
+  # current_user.movies.all
+
     render json: @contractors
   end
 
